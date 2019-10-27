@@ -1,5 +1,7 @@
-FROM gcc:7.4
-COPY . /upload
-WORKDIR /upload
-RUN g++ findrec.cpp -o findrec | g++ upload.cpp -o upload | g++ seek1.cpp -o seek1
-CMD ["./main && ./findrec && ./seek1"]
+FROM ubuntu:latest
+
+RUN mkdir -p /home/BD2
+
+COPY . /home/BD2
+
+CMD /home/BD2/upload 
