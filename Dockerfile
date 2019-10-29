@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-RUN mkdir -p /home/BD2
+RUN mkdir -p /home/tp2
 
-COPY . /home/BD2
+COPY . /home/tp2
 
-CMD /home/BD2/upload 
+WORKDIR /home/tp2/
